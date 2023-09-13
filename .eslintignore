@@ -1,0 +1,12 @@
+# Packages
+dist
+node_modules
+
+# IDE configs
+.vscode
+.idea
+
+# Storybook
+!.storybook
+docs
+storybook-static
