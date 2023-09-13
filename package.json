@@ -1,7 +1,7 @@
 {
   "name": "componentize",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.7.1",
   "type": "module",
   "scripts": {
     "build": "rollup -c",
@@ -9,7 +9,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test-storybook": "test-storybook",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "setup": "node setup.js"
   },
   "devDependencies": {
     "@emotion/css": "^11.11.2",
@@ -40,6 +41,7 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "eslint-plugin-storybook": "^0.6.13",
     "figlet": "^1.6.0",
+    "fs-extra": "^11.1.1",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "prettier": "^3.0.3",
