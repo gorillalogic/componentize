@@ -44,7 +44,12 @@ try {
   const found = require(answer);
   console.log('found', found);
 } catch (e) {
-  execSync(`npm i ${answer} --save-dev`);
+  if (answer === 'mantine') {
+    execSync(`npm i @mantine/core @mantine/hooks --save-dev`);
+  }
+  else {
+    execSync(`npm i ${answer} --save-dev`);
+  }
   fse.copySync(srcDir, destDir, { overwrite: true|false });
   console.log(`You selected ${answer} and was successfully installed`, '\n');
 }

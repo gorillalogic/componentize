@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 
 const meta = {
-  title: 'Example/Button',
+  title: 'Bootstrap/Button',
   component: Button,
   tags: ['autodocs'],
   argTypes: {

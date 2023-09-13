@@ -1,7 +1,7 @@
 import { Button } from '@chakra-ui/react';
 
 const meta = {
-  title: 'Example/Button',
+  title: 'Chakra/Button',
   component: Button,
   tags: ['autodocs'],
   argTypes: {

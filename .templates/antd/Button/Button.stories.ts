@@ -1,7 +1,7 @@
 import { Button } from 'antd';
 
 const meta = {
-  title: 'Example/Button',
+  title: 'AntDesign/Button',
   component: Button,
   tags: ['autodocs'],
   argTypes: {

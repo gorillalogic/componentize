@@ -1,7 +1,7 @@
 import Button from '@mui/material/Button';
 
 const meta = {
-  title: 'Example/Button',
+  title: 'Material/Button',
   component: Button,
   tags: ['autodocs'],
   argTypes: {

@@ -1,7 +1,7 @@
 import { Button } from '@mantine/core';
 
 const meta = {
-  title: 'Example/Button',
+  title: 'Mantine/Button',
   component: Button,
   tags: ['autodocs'],
   argTypes: {
