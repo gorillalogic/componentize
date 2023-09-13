@@ -44,8 +44,8 @@ try {
   const found = require(answer);
   console.log('found', found);
 } catch (e) {
-  // execSync(`npm i ${answer} --save-dev`);
-  // fse.copySync(srcDir, destDir, { overwrite: true|false });
+  execSync(`npm i ${answer} --save-dev`);
+  fse.copySync(srcDir, destDir, { overwrite: true|false });
   console.log(`You selected ${answer} and was successfully installed`, '\n');
 }
 
@@ -66,7 +66,7 @@ const deleteFiles = await select({
 });
 
 if (deleteFiles === 'yes') {
-  // fse.removeSync(baseDir);
+  fse.removeSync(baseDir);
   console.log('Setup files deleted', '\n');
 } else {
   console.log('Setup files kept', '\n');
