@@ -1,27 +1,57 @@
-# React + TypeScript + Vite
+# Componentize Boilerplate
+## A boilerplate for component-based web development
+by [Gabriel Garnica](mailto:gabriel.garnica@gorillalogic.com)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This boilerplate is a starting point for component-based web development. It uses [Storybook](https://storybook.js.org/) to develop components in isolation with documentation, and [Rollup](https://rollupjs.org/) to bundle components and publish as NPM package for multiple projects usage.
 
-Currently, two official plugins are available:
+Supports multiple UI components frameworks, including:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Mantine](https://mantine.dev/)
+- [Ant Design](https://ant.design/)
+- [Material UI (MUI)](https://material-ui.com/)
+- [React Bootstrap](https://react-bootstrap.github.io/)
+- [Chakra UI (WIP, not ready yet)](https://chakra-ui.com/)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 1. Clone the repository
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+git clone (repo url)
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Use the CLI setup script to prepare the boilerplate with the desired UI framework
+
+```bash
+npm run setup
+```
+
+### 4. Remove the unused boilerplate files through the CLI option (optional)
+
+### 5. Start Storybook
+
+```bash
+npm run storybook
+```
+### 6. Upload the changes to your own repository changing the remote URL
+
+```bash
+git remote set-url origin (your repo url)
+```
+
+### 7. Develop your components in isolation, document them and publish them as NPM package
+
+
+## Notes
+
+- The boilerplate is based on the [Component Driven User Interfaces](https://www.componentdriven.org/) methodology.
+- To learn more about Storybook and how to write stories, check the [official documentation](https://storybook.js.org/docs/react/get-started/introduction).
+- To learn more about Rollup, check the [official documentation](https://rollupjs.org/guide/en/).
+- To learn more about publishing NPM packages, check the [official documentation](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry).
+- For more information contact [write me an email](mailto:gabriel.garnica@gorillalogic.com) or reach me via Slack.
