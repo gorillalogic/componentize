@@ -1,41 +1,67 @@
-import { Button } from '@mantine/core';
+import { CustomButton } from './Button';
 
 const meta = {
-  title: 'Mantine/Button',
-  component: Button,
+  title: 'Mantine/CustomButton',
+  component: CustomButton,
   tags: ['autodocs'],
   argTypes: {
-    backgroundColor: { control: 'color' },
+    color: { control: 'color' },
+    variant: { control: 'select', options: ['default', 'filled', 'light', 'subtle', 'outline'] },
+    disabled: { control: 'boolean' },
   },
-} satisfies Meta<typeof Button>;
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = Object;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Primary: Story = {
+export const Default: Story = {
   args: {
-    primary: true,
-    label: 'Button',
+    variant: 'default',
+    children: 'Default Button',
   },
 };
 
-export const Secondary: Story = {
+export const Filled: Story = {
   args: {
-    label: 'Button',
+    variant: 'filled',
+    children: 'Filled Button',
   },
 };
 
-export const Large: Story = {
+export const Light: Story = {
   args: {
-    size: 'large',
-    label: 'Button',
+    variant: 'light',
+    children: 'Light Button',
   },
 };
 
-export const Small: Story = {
+export const Subtle: Story = {
   args: {
-    size: 'small',
-    label: 'Button',
+    variant: 'subtle',
+    children: 'Subtle Button',
+  },
+};
+
+export const Outline: Story = {
+  args: {
+    variant: 'outline',
+    children: 'Outline Button',
+  },
+};
+
+export const Compact: Story = {
+  args: {
+    variant: 'default',
+    compact: true,
+    children: 'Compact Button',
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    variant: 'default',
+    disabled: true,
+    children: 'Disabled Button',
   },
 };

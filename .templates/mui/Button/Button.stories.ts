@@ -1,41 +1,70 @@
-import Button from '@mui/material/Button';
+import { CustomButton } from './Button';
 
-const meta = {
-  title: 'Material/Button',
-  component: Button,
+const meta: Object = {
+  title: 'MaterialUI/CustomButton',
+  component: CustomButton,
   tags: ['autodocs'],
   argTypes: {
-    backgroundColor: { control: 'color' },
+    variant: { control: 'select', options: ['text', 'contained', 'outlined'] },
+    disabled: { control: 'boolean' },
+    color: { control: 'select', options: ["secondary", "success", "error"] },
+    size: { control: 'select', options: ['small', 'medium', 'large'] },
   },
-} satisfies Meta<typeof Button>;
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = Object;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Primary: Story = {
+export const Text: Story = {
   args: {
-    primary: true,
-    label: 'Button',
+    variant: 'text',
+    children: 'Text Button',
   },
 };
 
-export const Secondary: Story = {
+export const Contained: Story = {
   args: {
-    label: 'Button',
+    variant: 'contained',
+    children: 'Contained Button',
   },
 };
 
-export const Large: Story = {
+export const Outlined: Story = {
   args: {
+    variant: 'outlined',
+    children: 'Outlined Button',
+  },
+};
+
+export const Color: Story = {
+  args: {
+    variant: 'contained',
+    color: 'success',
+    children: 'Color Button',
+  },
+};
+
+export const Link: Story = {
+  args: {
+    variant: 'contained',
+    href: 'https://www.google.com',
+    children: 'Link Button',
+  },
+};
+
+export const Size: Story = {
+  args: {
+    variant: 'contained',
     size: 'large',
-    label: 'Button',
+    children: 'Large Size Button',
   },
 };
 
-export const Small: Story = {
+export const Disabled: Story = {
   args: {
-    size: 'small',
-    label: 'Button',
+    variant: 'contained',
+    disabled: true,
+    children: 'Disabled Button',
   },
 };

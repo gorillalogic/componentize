@@ -46,8 +46,14 @@ try {
 } catch (e) {
   if (answer === 'mantine') {
     execSync(`npm i @mantine/core @mantine/hooks --save-dev`);
-  }
-  else {
+  } else if (answer === 'mui') {
+    execSync(`npm i @mui/material @emotion/react @emotion/styled --save-dev`);
+  } else if (answer === 'bootstrap') {
+    execSync(`npm i react-bootstrap bootstrap --save-dev`);
+  } else if (answer === 'chakra') {
+    // execSync(`npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion --save-dev`);
+    console.log('Chakra UI is not yet supported and will be added soon');
+  } else {
     execSync(`npm i ${answer} --save-dev`);
   }
   fse.copySync(srcDir, destDir, { overwrite: true|false });

@@ -1,41 +1,67 @@
-import { Button } from 'antd';
+import { CustomButton } from './Button';
 
 const meta = {
-  title: 'AntDesign/Button',
-  component: Button,
+  title: 'AntDesign/CustomButton',
+  component: CustomButton,
   tags: ['autodocs'],
   argTypes: {
-    backgroundColor: { control: 'color' },
+    type: { control: 'select', options: ['default', 'filled', 'light', 'subtle', 'outline'] },
+    disabled: { control: 'boolean' },
+    loading: { control: 'boolean' },
   },
-} satisfies Meta<typeof Button>;
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = Object;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary: Story = {
   args: {
-    primary: true,
-    label: 'Button',
+    type: 'primary',
+    children: 'Primary Button',
   },
 };
 
-export const Secondary: Story = {
+export const Default: Story = {
   args: {
-    label: 'Button',
+    type: 'default',
+    children: 'Default Button',
   },
 };
 
-export const Large: Story = {
+export const Dashed: Story = {
   args: {
-    size: 'large',
-    label: 'Button',
+    type: 'dashed',
+    children: 'Dashed Button',
   },
 };
 
-export const Small: Story = {
+export const Text: Story = {
   args: {
-    size: 'small',
-    label: 'Button',
+    type: 'text',
+    children: 'Text Button',
+  },
+};
+
+export const Link: Story = {
+  args: {
+    type: 'link',
+    children: 'Link Button',
+  },
+};
+
+export const Loading: Story = {
+  args: {
+    type: 'default',
+    loading: true,
+    children: 'Loading Button',
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    variant: 'default',
+    disabled: true,
+    children: 'Disabled Button',
   },
 };
