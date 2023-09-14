@@ -1,5 +1,5 @@
 # Componentize Boilerplate
-## A boilerplate for component-based web development
+## A boilerplate for UI components development based on Storybook and Rollup
 by [Gabriel Garnica](mailto:gabriel.garnica@gorillalogic.com)
 
 This boilerplate is a starting point for component-based web development. It uses [Storybook](https://storybook.js.org/) to develop components in isolation with documentation, and [Rollup](https://rollupjs.org/) to bundle components and publish as NPM package for multiple projects usage.
